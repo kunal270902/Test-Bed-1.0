@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<robot name="testbed_2WD" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/GreyTransparent" />
+<xacro:property name="baseplate_color" value="Gazebo/DarkGrey" />
+<xacro:property name="spacer_color" value="Gazebo/Black" />
+<xacro:property name="lidar_color" value="Gazebo/Grey" />
+<xacro:property name="camera_color" value="Gazebo/Grey" />
+<xacro:property name="wheel_color" value="Gazebo/Grey" />
+<xacro:property name="caster_color" value="Gazebo/Grey" />
+
+
+<gazebo reference="base_link">
+  <material>${baseplate_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="m3_20mm_2_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_20mm_4_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_20mm_3_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_20mm_1_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="plate_b_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_40mm_3_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_40mm_2_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_40mm_4_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_40mm_1_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="plate_c_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_60mm_2_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_60mm_1_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_60mm_3_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="m3_60mm_4_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="plate_d_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="dept_cam_holder_1_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="dep_cam_holder_2_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_base_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="right_motor_clamp_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="left_motor_clamp_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_clamp_1_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_clamp_2_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_clamp_4_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_clamp_3_1">
+  <material>${spacer_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_link_1">
+  <material>${lidar_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="dept_cam_1">
+  <material>${camera_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <material>${wheel_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <material>${wheel_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="front_right_caster_1">
+  <material>${caster_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="front_left_caster_1">
+  <material>${caster_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="back_right_caster_1">
+  <material>${caster_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="back_left_caster_1">
+  <material>${caster_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>
