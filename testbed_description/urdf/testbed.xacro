@@ -550,6 +550,70 @@
   </collision>
 </link>
 
+
+<gazebo reference="lidar_1">
+        <material>Gazebo/Red</material>
+
+        <sensor name="laser" type="ray">       //ray sensor
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>laser_frame</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+
+
+
+
+    <gazebo>
+        <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+    
+    
+            <!-- Wheel Information -->
+            <left_joint>Revolute 28</left_joint>
+            <right_joint>Revolute 27</right_joint>
+            <wheel_separation>0.386</wheel_separation>
+            <wheel_diameter>0.1</wheel_diameter>
+    
+
+            <!-- Limits -->
+            <max_wheel_torque>200</max_wheel_torque>
+            <max_wheel_acceleration>10.0</max_wheel_acceleration>
+    
+
+            <!-- Output -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+    
+    
+        </plugin>
+    </gazebo>
+
+
 <link name="deptcam_1">
   <inertial>
     <origin xyz="4.543341335743606e-06 -0.009815091027303102 -2.6253696577827057e-07" rpy="0 0 0"/>
